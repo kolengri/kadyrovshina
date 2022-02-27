@@ -35,7 +35,7 @@ const Home: NextPage = () => {
           >
             {text}
           </textarea>
-          <div className="p-4">{kadyrovshina.join(" ")}</div>
+          <div className="p-4 whitespace-pre-wrap">{kadyrovshina.join(" ")}</div>
         </div>
       </Container>
     </HomeLayout>
