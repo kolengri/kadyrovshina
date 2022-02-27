@@ -18,7 +18,7 @@ export const PageLayout: FC<PageLayoutProps> = (props) => {
       {...otherProps}
     >
       <Header />
-      <Main className="flex-1">{children}</Main>
+      <Main className="flex-1 flex flex-col">{children}</Main>
       <Footer />
     </div>
   )

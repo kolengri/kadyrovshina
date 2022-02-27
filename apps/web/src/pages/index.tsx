@@ -30,15 +30,14 @@ const Home: NextPage = () => {
       <Head>
         <title>Любой текст в кадыровщину</title>
       </Head>
-      <Container>
+      <Container className="flex-1 flex flex-col">
         <h1 className="text-xl">Любой текст в кадыровщину</h1>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 flex-1">
           <textarea
-            className="border rounded p-4"
+            className="border rounded p-4 h-full"
             name="simpletext"
             id="simpletext"
             cols={100}
-            rows={30}
             onChange={(e) => setText(e.target.value)}
           >
             {text}
