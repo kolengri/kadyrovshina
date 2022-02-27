@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "component": "hygen component new --name",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -12,6 +13,7 @@
     "next": "12.0.8",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "utils": "*",
     "ui": "*"
   },
   "devDependencies": {
