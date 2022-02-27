@@ -33,15 +33,17 @@ const Home: NextPage = () => {
       <Container className="flex-1 flex flex-col">
         <h1 className="text-xl">Любой текст в кадыровщину</h1>
         <div className="grid grid-cols-2 gap-4 flex-1">
-          <textarea
-            className="border rounded p-4 h-full"
-            name="simpletext"
-            id="simpletext"
-            cols={100}
-            onChange={(e) => setText(e.target.value)}
-          >
-            {text}
-          </textarea>
+          <div className="flex flex-col">
+            <textarea
+              className="border rounded p-4 h-full flex-1 overflow-hidden"
+              name="simpletext"
+              id="simpletext"
+              cols={100}
+              onChange={(e) => setText(e.target.value)}
+            >
+              {text}
+            </textarea>
+          </div>
           <div className="p-4 whitespace-pre-wrap">{kadyrovshina.join(" ")}</div>
         </div>
       </Container>
