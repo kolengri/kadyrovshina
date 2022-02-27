@@ -9,12 +9,20 @@ const Home: NextPage = () => {
   const [kadyrovshina, setKadyrovshina] = useState([])
   useEffect(() => {
     const textArr = text.split(" ")
+    /* It's creating an array of random indexes. */
     const randIndexes = Array.from(
       new Set(Array.from({ length: textArr.length }, () => Math.floor(Math.random() * textArr.length)))
     )
-    randIndexes.forEach((index) => {
-      textArr.splice(index, 0, "дон")
+
+    /* It's filtering out the indexes that are not needed. */
+    const randIndexesNeedly = randIndexes.filter((num) => !randIndexes.includes(num + 1))
+
+    randIndexesNeedly.forEach((index) => {
+      if (index !== 0) {
+        textArr.splice(index, 0, "дон")
+      }
     })
+
     setKadyrovshina(textArr)
   }, [text])
   return (
